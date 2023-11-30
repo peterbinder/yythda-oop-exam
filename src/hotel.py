@@ -18,7 +18,7 @@ class Hotel:
     def add_room(self, room: Room):
         self._rooms.append(room)
 
-    def get_all_room(self):
+    def get_all_rooms(self):
         return self._rooms
 
     def get_room_by_room_nr(self, room_number: int):
