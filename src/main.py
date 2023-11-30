@@ -12,8 +12,9 @@ def start_booking(booking):
     booking.book_a_room(from_date, to_date, room_number)
 
 
-def start_cancelion():
-    pass
+def start_cancelion(booking):
+    booking_number = int(input('Please add the booking number for canceling'))
+    booking.delete_booking_item(booking_number)
 
 
 def list_booking(booking):
@@ -63,7 +64,7 @@ if __name__ == '__main__':
         if selected_option == 1:
             start_booking(booking)
         elif selected_option == 2:
-            start_cancelion()
+            start_cancelion(booking)
         elif selected_option == 3:
             list_booking(booking)
         elif selected_option == 4:
