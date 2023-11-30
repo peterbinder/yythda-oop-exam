@@ -5,8 +5,11 @@ from src.hotel import Hotel
 from src.room import SingleBedRoom, DoubleBedRoom
 
 
-def start_booking():
-    pass
+def start_booking(booking):
+    room_number = int(input("Please add the room number "))
+    from_date = datetime.strptime(input("Please add the from-date (yyyy-mm-dd): "), '%Y-%m-%d')
+    to_date = datetime.strptime(input("Please add the to-date (yyyy-mm-dd): "), '%Y-%m-%d')
+    booking.book_a_room(from_date, to_date, room_number)
 
 
 def start_cancelion():
@@ -52,13 +55,13 @@ if __name__ == '__main__':
 
     create_bookings(booking)
 
-
     while True:
 
-        selected_option = int(input('Please select from the menu:\n1. Booking\n2.Cancel booking\n3. List bookings\n4. Exit'))
+        selected_option = int(
+            input('Please select from the menu:\n1. Booking\n2.Cancel booking\n3. List bookings\n4. Exit'))
 
         if selected_option == 1:
-            start_booking()
+            start_booking(booking)
         elif selected_option == 2:
             start_cancelion()
         elif selected_option == 3:
