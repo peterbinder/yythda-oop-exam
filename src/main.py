@@ -55,7 +55,7 @@ if __name__ == '__main__':
 
     while True:
 
-        selected_option = input('Please select from the menu:\n1. Booking\n2.Cancel booking\n3. List bookings\n4. Exit')
+        selected_option = int(input('Please select from the menu:\n1. Booking\n2.Cancel booking\n3. List bookings\n4. Exit'))
 
         if selected_option == 1:
             start_booking()
