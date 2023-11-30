@@ -12,7 +12,7 @@ def start_booking(booking):
     booking.book_a_room(from_date, to_date, room_number)
 
 
-def start_cancelion(booking):
+def start_cancellation(booking):
     booking_number = int(input('Please add the booking number for canceling'))
     booking.delete_booking_item(booking_number)
 
