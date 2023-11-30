@@ -64,7 +64,7 @@ if __name__ == '__main__':
         if selected_option == 1:
             start_booking(booking)
         elif selected_option == 2:
-            start_cancelion(booking)
+            start_cancellation(booking)
         elif selected_option == 3:
             list_booking(booking)
         elif selected_option == 4:
