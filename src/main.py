@@ -14,7 +14,8 @@ def start_cancelion():
 
 
 def list_booking(booking):
-    all_bookings = booking.booking_list
+    for booking_item in booking.booking_item_list:
+        booking_item.print_details()
 
 
 def create_rooms():
@@ -45,7 +46,7 @@ def create_bookings(booking):
 
 if __name__ == '__main__':
 
-    hotel = Hotel('GDF Exam Hotel', create_rooms())
+    hotel = Hotel('GDE Exam Hotel', create_rooms())
 
     booking = Booking(hotel)
 
