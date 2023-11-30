@@ -15,9 +15,9 @@ class Room(ABC):
 
 class SingleBedRoom(Room):
 
-    def __init__(self):
+    def __init__(self, room_number):
         self._price = 100
-        self._room_number = 1
+        self._room_number = room_number
 
     @property
     def price(self):
@@ -30,9 +30,9 @@ class SingleBedRoom(Room):
 
 class DoubleBedRoom(Room):
 
-    def __init__(self):
+    def __init__(self, room_number):
         self._price = 150
-        self._room_number = 2
+        self._room_number = room_number
 
     @property
     def price(self):
