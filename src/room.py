@@ -26,3 +26,18 @@ class SingleBedRoom(Room):
     @property
     def room_number(self):
         return self._room_number
+
+
+class DoubleBedRoom(Room):
+
+    def __init__(self):
+        self._price = 150
+        self._room_number = 2
+
+    @property
+    def price(self):
+        return self._price
+
+    @property
+    def room_number(self):
+        return self._room_number
